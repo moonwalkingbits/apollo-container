@@ -1,0 +1,46 @@
+{
+    "name": "@moonwalkingbits/apollo-container",
+    "version": "0.1.0",
+    "description": "A dependency injection container done right.",
+    "author": "Martin Pettersson <martin@moonwalkingbits.com>",
+    "license": "MIT",
+    "keywords": [
+        "apollo",
+        "container",
+        "dependency injection",
+        "di",
+        "inversion of control",
+        "ioc"
+    ],
+    "homepage": "https://github.com/moonwalkingbits/apollo-container#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/moonwalkingbits/apollo-container.git"
+    },
+    "bugs": {
+        "url": "https://github.com/moonwalkingbits/apollo-container/issues"
+    },
+    "type": "module",
+    "exports": {
+        ".": "./index.js"
+    },
+    "files": [
+        "index.js",
+        "index.d.ts",
+        "lib/"
+    ],
+    "scripts": {
+        "test": "mocha",
+        "test:cover": "c8 npm test",
+        "test:typescript": "tsd"
+    },
+    "engines": {
+        "node": ">=14.5"
+    },
+    "devDependencies": {
+        "c8": "~7.3",
+        "chai": "~4.2",
+        "mocha": "~8.2",
+        "tsd": "~0.13"
+    }
+}
