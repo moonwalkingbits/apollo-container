@@ -268,12 +268,6 @@ describe("Container", () => {
             expect(container.invoke(a)).to.equal("a");
         });
 
-        it("should invoke a function with single parameter without parentheses", () => {
-            container.bindInstance("a", "a");
-
-            expect(container.invoke(a => `${a}b`)).to.equal("ab");
-        });
-
         it("should resolve dependency by name if bound", () => {
             container.bindInstance("a", "a");
 
