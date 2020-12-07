@@ -224,6 +224,19 @@ describe("Container", () => {
             expect(c.b.a).to.be.an.instanceof(A);
         });
 
+        it("should resolve parameters for parent constructors", () => {
+            class D extends B {}
+            class E extends D {}
+
+            container.bindConstructor("a", A);
+
+            const d = container.construct(D);
+            const e = container.construct(E);
+
+            expect(d.a).to.be.an.instanceof(A);
+            expect(e.a).to.be.an.instanceof(A);
+        });
+
         it("should use provided parameters", () => {
             const b = new B(new A());
             const c = container.construct(C, {b});
