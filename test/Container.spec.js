@@ -309,7 +309,7 @@ describe("Container", () => {
         });
 
         it("should use provided parameters over default values", () => {
-            const a = (x = "default value", y = "test") => x;
+            const a = (x = "default value") => x;
 
             expect(container.invoke(a, {x: "value"})).to.equal("value");
         });
@@ -336,7 +336,7 @@ describe("Container", () => {
             const x = "value";
             const a = (/* x = "default value" */) => x;
 
-            expect(container.invoke(a)).to.equal("value");
+            expect(container.invoke(a)).to.equal(x);
         });
     });
 });
