@@ -1,6 +1,6 @@
 {
     "name": "@moonwalkingbits/apollo-container",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "A dependency injection container done right.",
     "author": "Martin Pettersson <martin@moonwalkingbits.com>",
     "license": "MIT",
